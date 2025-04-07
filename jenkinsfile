@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/user/frontend-repo.git'
+                git 'https://github.com/sanvika20/dmt.git'
             }
         }
         stage('Install Dependencies') {
