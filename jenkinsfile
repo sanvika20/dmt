@@ -1,28 +1,18 @@
 pipeline {
     agent any
-    tools {
-        nodejs "NodeJS 18"
-    }
+
     stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/sanvika20/dmt.git'
-            }
-        }
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                echo 'Building...'
             }
         }
-        stage('Deploy') {
+
+        stage('Test') {
             steps {
-                echo 'Deploy process here...'
+                echo 'Testing...'
             }
         }
     }
 }
+
